@@ -1,0 +1,1 @@
+INSERT INTO `dede_diyform1` VALUES('2','0','寻模板','13588889999','9490489@qq.com','寻模板留言测试 www.xunmoban.com');

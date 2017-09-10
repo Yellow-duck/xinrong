@@ -1,0 +1,1 @@
+<div class="item"><a class="frizoomimgs" style="background-image:url([field:litpic/])" title='[field:title/]' href='[field:lj/]' target='_blank'></a></div>

@@ -1,0 +1,1 @@
+<div class="item"><span class='time'>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span><a href='[field:arcurl/]' title='[field:title/]'>[field:title/]</a></div>

@@ -1,0 +1,57 @@
+<header id="fh5co-header">
+    <div class="layout head-top">
+      <div class="container">
+        <div class="line inner">
+          <div class="xl12 xs8 xm8">
+            <div id="demo" class="welcome">
+              <div class="loopbox">
+                <div id="demo1">{dede:global.cfg_top/}</div>
+                <!-- <div id="demo2"></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="xl12 xs4 xm4">
+            <div class="top-contact float-right">         
+              <ul>
+                <li>
+                     <div class="search bar7">
+                      <form>
+                          <input placeholder="搜索课程" name="crid" type="text">
+                          <button type="submit"></button>
+                      </form>
+                  </div>
+                </li>
+                <li id="hov-weixin-id"> <a id="weixint" data-target="weixint-content" href="#none"> <i class="icon-weixin"> </i> </a>
+                  <div class="weixint-content hidden">
+                    <div class="text-center weixin-img"> <img src="/style/images/ma.png"> </div>
+                  </div>
+                </li>
+                <li><a href="http://wpa.qq.com/msgrd?v=1&amp;uin={dede:global.cfg_qq/}&amp;site=&amp;menu=yes" target="_blank"><i class="icon-qq"></i></a></li>
+                <li><a href="{dede:global.cfg_weibo/}" target="_blank"><i class="icon-weibo"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="layout fixed header-box">   
+      <div class="container">
+        <div class="nav-navicon" id="nav-main1">
+          <ul class="nav  nav-inline  nav-menu">
+           <img src="/style/images/h2.png" alt="">
+            <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='current'":@me="";{/dede:field}><a class="first-level" href='/'>官网首页</a></li>
+            {dede:channelartlist row=10 typeid='top'}
+            <li {dede:field name='currentstyle'/}><a class="first-level" href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}<span class="downward"></span></a>
+              <ul class="drop-menu">
+                {dede:channel type='son' noself='yes'}
+                <li><a href='[field:typelink/]' title="[field:typename/]">[field:typename/]</a></li>
+                {/dede:channel}
+              </ul>
+            </li>
+            {/dede:channelartlist}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>

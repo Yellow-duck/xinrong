@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+  <link rel="stylesheet" type="text/css" href="/style/css/pintuer.css" />
+  <link rel="stylesheet" type="text/css" href="/style/css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="/style/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="/style/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/style/css/sousuo.css" />
+<script type="text/javascript" src="/style/js/jquery.min.js"></script>
+<script src="/style/js/animate.min.js"></script>
+<script type="text/javascript" src="/style/js/pintuer.js"></script>
+<script type="text/javascript" src="/style/js/jquery.carouFredSel.packed.js"></script>
+<script src="/style/js/main.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="/style/js/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="inner-box-body" id="article-box-id">
+
+<!-- 顶部导航 begin-->
+{dede:include filename="head.htm"/}
+<!-- 顶部导航 end--> 
+
+<!-- 轮播图片 begin-->
+
+<div class="layout">
+  <div class="slideshow" style="background-image:url(/style/images/banner.jpg)">
+    <div class="container">
+
+    </div>
+  </div>
+</div>
+
+<!-- 轮播图片 end--> 
+
+<!-- 内容展示 begin-->
+
+<div class="layout"  id="fh5co-content_show">
+  <div class="container">
+    <div class="title">
+      <ul class="bread">
+        <li>{dede:field.position/}</li>
+      </ul>
+    </div>
+    <div class="line-big">
+      <div class="xl12 xs8 xm9">
+        <div class="show_content padding-bottom">
+          <div class="line show_list">
+            <ul class="list-media article-media">
+              {dede:list pagesize='8'}
+              <li>
+                <div class="media media-x">
+                  <div class="caldata float-left">
+                    <div class="content text-center">
+                      <p class="day">[field:pubdate function='strftime("%d",@me)'/]</p>
+                      <p class="mon-year">[field:pubdate function='strftime("%Y-%m",@me)'/]</p>
+                    </div>
+                  </div>
+                  <div class="media-body">
+                    <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+                    <p class="desc">[field:description function='cn_substr(@me,250)'/]...</p>
+                  </div>
+                </div>
+              </li>
+			{/dede:list}
+            </ul>
+          </div>
+          <div class="pagess">
+            <ul>
+             {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+            </ul>
+            </div>
+        </div>
+      </div>
+      {dede:include filename="right.htm"/}
+    </div>
+  </div>
+</div>
+
+<!-- 内容展示 end--> 
+
+<!--footer-->
+{dede:include filename="foot.htm"/}
+</body>
+</html>

@@ -1,0 +1,2 @@
+<li><a href='[field:typelink /]' target='_blank'>[field:typename /]</a></li>{dede:global.cfg_dz/}
+              {dede:type typeid='16'}<li><a href='[field:typelink /]' target='_blank'>[field:typename /]</a></li>

@@ -1,0 +1,19 @@
+﻿<div class="xl12 xs4 xm3 hidden-l">
+        <div class="leftbar">
+          <h3>{dede:field.typeid runphp='yes'}$ID = @me; $sql = "SELECT * FROM `dede_arctype` WHERE id=$ID";$query = mysql_query($sql);$row=mysql_fetch_array($query); $relID = "$row[reid]"; if($relID == 0) {@me = $row[typename];}else{$sql = "SELECT `typename` FROM `dede_arctype` WHERE id=$relID";$query = mysql_query($sql);$row=mysql_fetch_array($query); @me = $row[typename];}{/dede:field.typeid}</h3>
+          <ul class="subnav padding-large-bottom">
+            {dede:channel type='son'}
+            <li><a href='[field:typeurl/]' title='[field:typename/]'>[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+          <h3  class="margin-large-top">联系方式丨CONTACT</h3>
+          <div class="leftcon margin-large-bottom">
+            <ul>
+              <li><img src="/style/images/lc-1.png" />全国热线：{dede:global.cfg_dh/}</li>
+              <li><img src="/style/images/lc-2.png" />传真热线：{dede:global.cfg_cz/}</li>
+              <li><img src="/style/images/lc-3.png" />Q Q咨询：{dede:global.cfg_qq/}</li>
+              <li><img src="/style/images/lc-4.png" />企业邮箱：<a href="mailto:{dede:global.cfg_yx/}" target="_blank">{dede:global.cfg_yx/}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>

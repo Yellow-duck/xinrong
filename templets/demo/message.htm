@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/style/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="/style/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="/style/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/style/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/style/css/sousuo.css" />
+<script type="text/javascript" src="/style/js/jquery.min.js"></script>
+<script type="text/javascript" src="/style/js/pintuer.js"></script>
+<script type="text/javascript" src="/style/js/animate.min.js"></script>
+<script src="/style/js/main.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="/style/js/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="inner-box-body">
+
+<!-- 顶部导航 begin-->
+{dede:include filename="head.htm"/}
+<!-- 顶部导航 end--> 
+
+<!-- 轮播图片 begin-->
+
+<div class="layout">
+  <div class="slideshow" style="background-image:url(/style/images/banner.jpg)">
+    <div class="container">
+
+    </div>
+  </div>
+</div>
+
+<!-- 轮播图片 end--> 
+
+<!-- 内容展示 begin-->
+
+<div class="layout"  id="fh5co-content_show">
+  <div class="container">
+    <div class="title">
+      <ul class="bread">
+        <li>{dede:field.position/}</li>
+      </ul>
+    </div>
+    <div class="line-big">
+      <div class="xl12 xs8 xm9">
+        <div class="line text-center f-heading">
+          <div class="xl12 xs12 xm8 xm2-move">
+            <h2>品质至上，诚信为重，用心服务，以质量领先，我们真诚与您合作，</h2>
+            <p> 竭诚为您服务！</p>
+            <span> QUALITY FIRST, INTEGRITY ORIENTED, HARD SERVICE, LEADING TECHNOLOGY, WE SINCERELY COOPERATE WITH YOU, FOR YOUR DEDICATED SERVICE!</span> </div>
+        </div>
+        <div class="show_content padding-large-bottom margin-large-top" >
+          <form action="/plus/diy.php" enctype="multipart/form-data" method="post"  class="form form-block">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="1" />
+            <input type="hidden" name="do" value="2" />
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="input" id="name" name="name" size="50" data-validate="required:请输入您的姓名" placeholder="姓名" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="input" id="tel" name="tel" size="50"  data-validate="required:请输入电话" placeholder="电话" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <input type="text" class="input" id="email" name="email" size="50" data-validate="required:邮箱格式错误,length#<50:字数在0-50个"  placeholder="邮箱" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="field">
+                <textarea  class="input" id="content" name="content"  data-validate="required:请输入内容" placeholder="内容"></textarea>
+              </div>
+            </div>
+            <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext" />
+			<input type="hidden" name="dede_fieldshash" value="0a243a3fc0c8ccd25d6ad4b9796ffbf5" />
+            <div class="form-button">
+              <button class="button bg-main margin-small-right" type="submit">提交</button>
+              <button class="button bg-main" type="reset">重置</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="xl12 xs4 xm3 hidden-l">
+        <div class="leftbar">
+          <h3>{dede:type typeid='2'}[field:typename /]{/dede:type}</h3>
+          <ul class="subnav padding-large-bottom">
+            {dede:channel typeid='2'}
+            <li><a href='[field:typeurl/]' title='[field:typename/]'>[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+          <h3  class="margin-large-top">联系方式丨CONTACT</h3>
+          <div class="leftcon margin-large-bottom">
+            <ul>
+              <li><img src="/style/images/lc-1.png" />全国热线：{dede:global.cfg_dh/}</li>
+              <li><img src="/style/images/lc-2.png" />传真热线：{dede:global.cfg_cz/}</li>
+              <li><img src="/style/images/lc-3.png" />Q Q咨询：{dede:global.cfg_qq/}</li>
+              <li><img src="/style/images/lc-4.png" />企业邮箱：<a href="mailto:{dede:global.cfg_yx/}" target="_blank">{dede:global.cfg_yx/}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 内容展示 end--> 
+
+<!--footer-->
+{dede:include filename="foot.htm"/}
+</body>
+</html>

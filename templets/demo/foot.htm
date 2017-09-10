@@ -1,0 +1,90 @@
+<footer>
+  <div class="layout foot-top hidden-l">
+    <div class="container">
+      <div class="line">
+        <div class="xl12 xs6 xm4 block-item block-item1 margin-large-bottom">
+          <h2>联系方式</h2>
+          <div class="foot-contact">
+            <p class="tel">全国咨询热线电话：{dede:global.cfg_dh/}</p>
+            <p class="email">官方网站：www.xinrongcn.com<!-- 企业邮箱：{dede:global.cfg_yx/} --></p>
+            <p class="addr">手机网站：www.xinrongcn.com/3G/<!-- 联系地址：{dede:global.cfg_dz/} --></p>
+          </div>
+        </div>
+        <!-- <div class="xl12 xs6 xm4 block-item block-item2 margin-large-bottom">
+          <h2>{dede:type typeid='2'}[field:typename /]{/dede:type}</h2>
+          <div class="p-nav">
+            <ul>
+              {dede:channel type='son' typeid='2'}
+              <li><a href='[field:typeurl/]' title="[field:typename/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+        </div> -->
+        <div class="xl12 xs6 xm4 block-item block-item3 margin-large-bottom">
+          <h2>校区地址<!-- {dede:type typeid='1'}[field:typename /]{/dede:type} --></h2>
+          <div class="list-nav">
+            <ul>
+              <li><a href='[field:typelink /]' target='_blank'>{dede:global name='cfg_dz'/}</a></li>
+              <li><a href='[field:typelink /]' target='_blank'>{dede:global name='cfg_beian'/}</a></li>
+             <!--  {dede:type typeid='15'}<li><a href="[field:typelink /]">[field:typename /]</a></li>{/dede:type} -->
+            </ul>
+          </div>
+        </div>
+        <div class="xl12 xs6 xm2 block-item block-item3 margin-large-bottom">
+          <h2>{dede:type typeid='9'}[field:typename /]{/dede:type}</h2>
+          <div class="list-nav">
+            <ul>
+              {dede:channel type='son' typeid='9'}
+              <li><a href='[field:typeurl/]' title="[field:typename/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+
+<!--footer-->
+
+<div class="blank55"></div>
+<div id="toolbar" class="layout text-center">
+  <div class="x3"><a href="/"><span class="icon-home"></span>首页</a></div>
+  <div class="x3"><a href="tel:{dede:global.cfg_dh/}"><span class="icon-phone"></span>电话</a></div>
+  <div class="x3"><a href="sms:{dede:global.cfg_dh/}"><span class="icon-envelope-o"></span>短信</a></div>
+  <div class="x3">{dede:type typeid='16'}<a href="[field:typelink /]"><span class="icon-user"></span>联系</a>{/dede:type}</div>
+</div>
+<script type="text/javascript">
+
+var demo = document.getElementById("demo");
+
+var demo1 = document.getElementById("demo1");
+
+var demo2 = document.getElementById("demo2");
+
+demo2.innerHTML=document.getElementById("demo1").innerHTML;
+
+function Marquee(){
+
+if(demo.scrollLeft-demo2.offsetWidth>=0){
+
+ demo.scrollLeft-=demo1.offsetWidth;
+
+}
+
+else{
+
+ demo.scrollLeft++;
+
+}
+
+}
+
+var myvar=setInterval(Marquee,60);
+
+demo.onmouseout=function (){myvar=setInterval(Marquee,60);}
+
+demo.onmouseover=function(){clearInterval(myvar);}
+
+</script>

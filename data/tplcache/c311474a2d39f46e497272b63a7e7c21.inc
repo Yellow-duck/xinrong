@@ -1,0 +1,1 @@
+--><li><a href='[field:typelink /]' target='_blank'>[cfg_beian /]</a></li><!--

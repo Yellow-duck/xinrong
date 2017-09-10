@@ -1,0 +1,1 @@
+<li><a href="[field:lj/]" target="_blank"><img src="[field:litpic/]" alt="2" /></a></li>
